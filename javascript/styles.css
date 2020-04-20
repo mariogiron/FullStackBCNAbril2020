@@ -1,0 +1,15 @@
+:root {
+    --color-brand: rgba(122, 122, 122, 0.5);
+}
+
+.uno {
+    background-color: var(--color-brand);
+}
+
+.dos {
+    color: var(--color-brand);
+}
+
+.tres {
+    border-color: var(--color-brand);
+}

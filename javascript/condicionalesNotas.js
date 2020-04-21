@@ -29,3 +29,16 @@ if (nota < 5 && nota >= 0) { // 0...5
 } else {
     console.log('La nota debe estar entre 0 y 10');
 }
+
+// CUIDADO CON LAS ANIDACIONES !!!!
+// Código piramidal MALO!!
+
+if (nota >= 0) {
+    console.log('La nota es mayor o igual a cero');
+    if (nota >= 5) {
+        console.log('La nota es mayor que 5');
+        if (nota < 10) {
+            console.log('La nota está entre 5 y 10');
+        }
+    }
+} 

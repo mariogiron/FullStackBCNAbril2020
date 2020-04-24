@@ -1,6 +1,6 @@
 const hospital = [
     { nombre: 'Juan', apellido: 'Perez', diagnostico: 'Cefaleas', edad: 36, numeross: 'A34905' },
-    { nombre: 'Juan', apellido: 'Guitierrez', diagnostico: 'Cefaleas', edad: 33, numeross: 'A34907' },
+    { nombre: 'Juan', apellido: 'Gutierrez', diagnostico: 'Cefaleas', edad: 33, numeross: 'A34907' },
     { nombre: 'Alex', apellido: 'Rodriguez', diagnostico: 'Gripe', edad: 30, numeross: 'A58934' },
     { nombre: 'Carlos', apellido: 'Lopez', diagnostico: 'Hernia de disco', edad: 50, numeross: 'A45690' },
     { nombre: 'Luis', apellido: 'Ramirez', diagnostico: 'Conjutivitis', edad: 35, numeross: 'A98702' },

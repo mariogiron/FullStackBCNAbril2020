@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li onclick="cambiarColor(event)">red</li>
+        <li onclick="cambiarColor(event)">green</li>
+        <li onclick="cambiarColor(event)">yellow</li>
+    </ul>
+    <ul>
+        <li onclick="cambiarColorV2(this)">red</li>
+        <li onclick="cambiarColorV2(this)">green</li>
+        <li onclick="cambiarColorV2(this)">yellow</li>
+    </ul>
+    <ul>
+        <li data-color="red" onclick="cambiarColorV3(this)">Rojo</li>
+        <li data-color="#00FF00" onclick="cambiarColorV3(this)">Verde</li>
+        <li data-color="rgb(255, 255, 0)" onclick="cambiarColorV3(this)">Amarillo</li>
+    </ul>
+
+    <!-- 
+        Crear un boton y cuando pulsemos crear una Persona
+    -->
+    <section id="personas"></section>
+    <button onclick="pintarPersona('mario', 'alicante')" onmouseenter="entrarBoton()">Agregar Persona</button>
+
+    <script src="../dom/js/creacionElementos.js"></script>
+    <script src="./js/eventos1.js"></script>
+</body>
+
+</html>

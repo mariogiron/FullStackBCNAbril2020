@@ -1,5 +1,7 @@
 ## Índice
 
+### DOM
+
 - dom1.html - Funciones **getElementsByTagName** y propiedades innerText e innerHTML
 
 **getElementsByTagName** - Devuelve un array con todos aquellos elementos que sean de la etiqueta que pasamos por parámetro.
@@ -40,3 +42,21 @@ Acceso a las clases de un elemento HTML a partir de **className (string)** y **c
 - dom9.html
 
 Modificación de estilos a partir de las propiedades **data-**
+
+- creacionElementos.html
+
+Crear elementos de manera dinámica a través de JS, con los métodos **createElement**, **appendChild** y **removeChild**
+
+### EVENTOS
+
+- eventos1.html
+
+Asignar eventos sobre elementos HTML directamente como un atributo de dicho elemento
+
+- eventos2.html
+
+Asignación dinámica de eventos a través del método **addEventListener**
+
+- eventos3.html
+
+Asignación dinámica de eventos sobre un grupo de LIs

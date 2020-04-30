@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-md-4">
+                <h5>Filtro por Edad:</h5>
+                <div class="selectores-edad">
+                    <label>Edad Mínima</label>
+                    <select id="edadMin" class="form-control"></select>
+                    <label>Edad Máxima</label>
+                    <select id="edadMax" class="form-control"></select>
+                    <button id="btnFiltroEdad" class="btn btn-block btn-primary mt-3">Filtrar</button>
+                </div>
+
+                <h5 class="mt-5">Filtro por diagnóstico:</h5>
+                <select id="selectDiagnostico" class="form-control"></select>
+
+                <h5 class="mt-5">Filtro por nombre:</h5>
+                <input type="text" id="inputNombre" class="form-control" />
+
+                <button class="btn btn-danger btn-block mt-5" id="btnReset">Reset</button>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="row pacientes">
+                    <!-- Aquí aparecerán de manera dinámica los pacientes dependiendo del filtro -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/modelo.js"></script>
+    <script src="./js/interfazGrafica.js"></script>
+    <script src="./js/eventos.js"></script>
+    <script src="./js/funciones.js"></script>
+</body>
+
+</html>

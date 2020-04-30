@@ -1,0 +1,21 @@
+[
+    {
+        "nombre": "Mario",
+        "apellidos": "Girón",
+        "email": "mario@neoland.es",
+        "aficiones": [
+            "baloncesto",
+            "pesca de arrastre",
+            "salir a correr"
+        ]
+    },
+    {
+        "nombre": "Manuel",
+        "apellidos": "López",
+        "email": "manuel@neoland.es",
+        "aficiones": [
+            "fungol",
+            "ir de bares"
+        ]
+    }
+]

@@ -1,0 +1,12 @@
+.pacientes article {
+    border: 1px solid black;
+}
+
+.pacientes article h4 {
+    background-color: rgb(245, 204, 153);
+    padding: 15px;
+}
+
+.pacientes article ul {
+    list-style: none;
+}

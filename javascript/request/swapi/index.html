@@ -5,11 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #personajes {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #personajes li {
+            padding: 20px;
+            border: 1px solid black;
+            /**display: inline; */
+            width: '50px';
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <div>
         <ul id="personajes"></ul>
+        <button id="btnPrev" data-type="prev">Prev.</button>
+        <button id="btnNext" data-type="next">Next</button>
+    </div>
+    <div class="detalle-personaje"></div>
+    <div class="lista-peliculas">
+        <ul></ul>
     </div>
     <script src="./js/swapi.js"></script>
 </body>

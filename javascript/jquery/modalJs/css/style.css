@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagen {
+    width: 120px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: mintcream;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal .manto {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+}
+
+.modal .contenedor {
+    position: relative;
+    width: 40%;
+    background-color: white;
+    padding: 15px;
+    margin: 0 auto;
+    top: 30px;
+    text-align: center;
+}
+
+.modal .cerrar {
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    top: -20px;
+    right: -20px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 12px;
+}

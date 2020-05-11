@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargas de archivos externos - Load</title>
+
+    <style>
+        #menu {
+            list-style: none;
+        }
+
+        #menu li {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        #menu li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+
+        #contenedor {
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a data-documento="docu1" href="#">documento 1</a></li>
+        <li><a data-documento="docu2" href="#">documento 2</a></li>
+        <li><a data-documento="docu3" href="#">documento 3</a></li>
+        <li><a data-documento="docu4" href="#">documento 4</a></li>
+    </ul>
+
+    <main id="contenedor">
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

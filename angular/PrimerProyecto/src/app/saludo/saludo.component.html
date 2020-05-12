@@ -1,0 +1,13 @@
+<p>En un lugar de la mancha</p>
+<p>Hola <strong class="rojo">{{ nombre }}</strong></p>
+<p>{{ (10 + 5) * numero}}</p>
+<p>{{ mostrarMensaje() }}</p>
+<p [id]="identificador">Parra con id</p>
+<button (click)="pulsarBoton()">Pulsame!!!!</button>
+<select (change)="cambiarSelect($event)">
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
+    <option value="4">Cuatro</option>
+</select>
+<input type="text" (input)="cambiarTexto($event)">

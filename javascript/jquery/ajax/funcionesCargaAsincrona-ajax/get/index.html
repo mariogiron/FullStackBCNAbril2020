@@ -35,6 +35,7 @@
         }
 
         function pintarUsuarios(pListaUsuarios) {
+            seccionUsuarios.html("");
             for (usuario of pListaUsuarios) {
                 seccionUsuarios.append(`<article>
                     <h3>${usuario.name}</h3> 

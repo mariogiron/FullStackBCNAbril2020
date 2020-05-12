@@ -1,0 +1,14 @@
+.rojo {
+    color: red;
+}
+
+#miparrafito {
+    background-color: tomato;
+    padding: 10px;
+}
+
+#otroid {
+    background-color: blue;
+    color: white;
+    padding: 20px; 
+}

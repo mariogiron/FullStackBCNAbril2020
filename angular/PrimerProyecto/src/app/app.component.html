@@ -1,6 +1,30 @@
-<div>
+<!-- <div>
     <app-saludo></app-saludo>
 </div>
 <div>
+    <app-cronometro inicio="6" fin="10"></app-cronometro>
     <app-cronometro></app-cronometro>
+</div> -->
+<div>
+    {{numeros[5]}}
+    <neo-suma [num1]="numeros[5]" [num2]="numeros[3]"></neo-suma>
+    <neo-suma num1="13" num2="25"></neo-suma>
+
+    <neo-suma [num1]="numeros[4]" num2="25" (sumaRealizada)="onSumaRealizada($event)"></neo-suma>
+
 </div>
+
+<!--
+    1 - crear el componente 
+    2 - que componente tiene que cumplir los paremetros que estan puesto arriba
+    3 - revisar el selector
+    4 - crear los inputs
+    5 - componente tiene que mostrar por pantalla la suma 5 + 3 = 8
+ 
+-->
+
+<section id="equipo">
+    <detalle-persona [persona]="arrPersonas[0]"></detalle-persona>
+    <detalle-persona [persona]="arrPersonas[1]"></detalle-persona>
+    <detalle-persona [persona]="arrPersonas[2]"></detalle-persona>
+</section>

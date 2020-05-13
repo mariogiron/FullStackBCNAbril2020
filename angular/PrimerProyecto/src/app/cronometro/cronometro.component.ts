@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cronometro',
@@ -6,18 +6,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cronometro.component.css']
 })
 export class CronometroComponent implements OnInit {
+
+  /* Cuidado con el tipo de los INPUT. Suele ser string */
+  @Input() inicio: string;
+  @Input() fin: string;
+
   contador: number;
 
   constructor() {
-    this.contador = 2;
+    /*aqui no tenemos disponibles los valores Input*/
+    this.contador = Math.round(Math.random() * 20);
   }
 
   ngOnInit(): void {
+    /*aqui ya tenemos disponibles los valores Input*/
+    /* console.log('NGONINIT', this.inicio); */
+    if (this.inicio) {
+      this.contador = parseInt(this.inicio);
+    }
+
   }
 
   iniciarCronometro() {
-    setInterval(() => {
-      this.contador = this.contador + 2;
+    const intervalo = setInterval(() => {
+      if (this.contador === parseInt(this.fin)) {
+        /* que se pare mi componente que deje de contar */
+        clearInterval(intervalo);
+      }
+      else {
+        this.contador = this.contador + 2;
+      }
     }, 1000)
   }
 

@@ -1,0 +1,4 @@
+#equipo {
+    display: flex;
+    flex-wrap: wrap;
+}

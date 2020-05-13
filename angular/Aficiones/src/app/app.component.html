@@ -1,0 +1,7 @@
+<!-- <h1>Directiva ngModel</h1>
+<input type="text" [(ngModel)]="mensaje">
+<p id="texto">{{ resultado }}</p>
+<button (click)="pintarMensaje()">Pintar mensaje</button> -->
+<app-formulario (hobbieEnviado)="onHobbieEnviado($event)"></app-formulario>
+<hr>
+<app-lista-aficiones [hobbies]="arrHobbies"></app-lista-aficiones>

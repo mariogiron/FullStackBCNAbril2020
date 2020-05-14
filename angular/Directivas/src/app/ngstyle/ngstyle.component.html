@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="color">
+<p [ngStyle]="{'color': color, 'font-size': '24px'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Temporibus quidem,
+    excepturi quibusdam
+    mollitia dolor
+    animi, amet sunt repellat voluptate voluptates nemo consequuntur. Explicabo, labore similique? Debitis beatae maxime
+    dolorem sit.</p>
+
+<p [ngStyle]="estilosParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia cumque repellat voluptas
+    sed ipsam velit enim odit.
+    Repudiandae, deserunt nostrum. Repellendus ratione nihil, repudiandae enim asperiores magni facere veritatis velit.
+</p>
+
+<button (click)="cambiarEstilos()">Cambiar estilos</button>
+<input type="range" min="10" max="70" step="1" (input)="cambiarFuente($event)">

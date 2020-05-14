@@ -1,0 +1,13 @@
+<h1>Recorrer y pintar un listado de elementos</h1>
+<div class="episodios">
+
+    <div [ngClass]="{'par': par}" class="episodio"
+        *ngFor="let episodio of episodios; let i= index; let par = even; let ultimo= last; let primero= first">
+        <h3>{{i}} - {{episodio.title}}</h3>
+
+        <p>{{episodio.director}}</p>
+
+        <p *ngIf="primero">primero: {{primero}}</p>
+        <p *ngIf="ultimo">ultimo: {{ultimo}}</p>
+    </div>
+</div>

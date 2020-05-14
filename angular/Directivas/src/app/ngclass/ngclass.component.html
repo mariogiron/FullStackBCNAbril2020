@@ -1,0 +1,12 @@
+<p [ngClass]="'textoRojo fondoAzul'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, odio
+    cumque sit nesciunt ducimus iure vel
+    ex? Dolor corporis architecto, fugit pariatur magnam totam reprehenderit, exercitationem nihil corrupti itaque
+    porro!</p>
+
+<p [ngClass]="{'fondoRojo' : !activo, 'fondoAzul': activo}">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Maiores
+    recusandae odio
+    laboriosam expedita quidem. Ullam, delectus numquam rerum suscipit tenetur voluptatem eos eius quibusdam illo
+    deleniti minus obcaecati fuga velit?</p>
+
+<button (click)="cambiarEstado()">activar</button>

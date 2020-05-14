@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.tabs {
+    width: 500px;
+    margin: 30px auto;
+}
+
+.tabs .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tabs .nav li {
+    width: 100%;
+    cursor: pointer;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tabs .nav .activo {
+    background-color: gray;
+}
+
+.tabs .nav li:hover {
+    background-color: gray;
+}
+
+.tabs section {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.tabs section article {
+    margin-bottom: 10px;
+}

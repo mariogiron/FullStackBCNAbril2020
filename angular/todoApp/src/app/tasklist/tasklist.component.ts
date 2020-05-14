@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tasklist',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasklistComponent implements OnInit {
 
-  constructor() { }
+  @Input() tareas: any[];
+  arrTareas: any[];
+
+  constructor() {
+    this.arrTareas = [];
+  }
 
   ngOnInit(): void {
+    this.arrTareas = this.tareas;
+    console.log('componente', this.arrTareas);
   }
 
 }

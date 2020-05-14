@@ -15,15 +15,7 @@
               </select>
               <button class="add btn btn-primary font-weight-bold todo-list-add-btn">Añadir</button> </div>
             <div class="list-wrapper">
-              <ul class="d-flex flex-column todo-list">
-
-                <li class="mensual completed">
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
-                        checked=""> For what reason would it be advisable for me to think. <i
-                        class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-
-              </ul>
+              <app-tasklist [tareas]="arrTareas"></app-tasklist>
             </div>
           </div>
         </div>

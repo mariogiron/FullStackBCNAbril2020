@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   arrTareas: any[];
+  tarea: any;
 
   constructor() {
     this.arrTareas = [
@@ -31,6 +32,24 @@ export class AppComponent {
         priority: 'urgente'
       },
     ];
+  }
+
+  tareaEnviada($event) {
+    this.arrTareas.push($event);
+    console.log(this.arrTareas);
+  }
+
+  tareaBorrada($event) {
+    // console.log('tareaBorrada', $event);
+
+    // primero tengo que buscar la posicion del id en mi array -> findIndex
+
+    const posicionBorrar = this.arrTareas.findIndex(tarea => {
+      return tarea.id === parseInt($event);
+    });
+    // despues borrare ese elemento con splice pasandole la posicion y 1 como cantidad de valor
+
+    this.arrTareas.splice(posicionBorrar, 1);
   }
 
 }

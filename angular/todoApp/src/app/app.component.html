@@ -5,17 +5,9 @@
         <div class="card px-3">
           <div class="card-body">
             <h4 class="card-title">Aplicación Todo list</h4>
-            <div class="add-items d-flex"> <input type="text" class="form-control todo-list-input"
-                placeholder="¿Qué es lo que vas hacer hoy?">
-              <select class="form-control">
-                <option value="">Selecciona un prioridad</option>
-                <option value="urgente">Urgente</option>
-                <option value="diario">Diaria</option>
-                <option value="mensual">Mensual</option>
-              </select>
-              <button class="add btn btn-primary font-weight-bold todo-list-add-btn">Añadir</button> </div>
+            <app-taskform (tareaEnviada)="tareaEnviada($event)"></app-taskform>
             <div class="list-wrapper">
-              <app-tasklist [tareas]="arrTareas"></app-tasklist>
+              <app-tasklist (tareaBorrada)="tareaBorrada($event)" [tareas]="arrTareas"></app-tasklist>
             </div>
           </div>
         </div>

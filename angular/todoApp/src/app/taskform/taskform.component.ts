@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-taskform',
@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskformComponent implements OnInit {
 
-  constructor() { }
+  @Output() tareaEnviada: EventEmitter<any>;
+
+  titulo: string;
+  prioridad: string;
+  tarea: any;
+  idTarea: number;
+
+  constructor() {
+    this.tareaEnviada = new EventEmitter();
+    this.titulo = '';
+    this.prioridad = '';
+    this.tarea = {};
+    this.idTarea = 5;
+  }
 
   ngOnInit(): void {
+  }
+
+  recogerDatos() {
+    this.tarea = {
+      id: this.idTarea,
+      title: this.titulo,
+      priority: this.prioridad
+    };
+    this.idTarea++;
+    this.tareaEnviada.emit(this.tarea);
   }
 
 }

@@ -1,9 +1,13 @@
 <ul class="d-flex flex-column todo-list">
 
-    <li *ngFor="let tarea of arrTareas" [ngClass]="tarea.priority">
-        <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox" checked="">
+    <li *ngFor="let tarea of arrTareas" [ngClass]="[tarea.priority]">
+        <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
+                    (change)="completarTarea($event)">
                 {{tarea.title}} <i class="input-helper"></i></label> </div> <i
-            class="remove mdi mdi-close-circle-outline"></i>
+            class="remove mdi mdi-close-circle-outline" [attr.data-id]="tarea.id" (click)="borrarTarea($event)"></i>
     </li>
 
+    <!-- hay que añadir al array la propiedad completada: true, cuando hagamos click en el check debemos actualizar el array de completado false a true, cuando hagamos esto en listado aparecera tachado.-->
+
+    <!-- evento -> output -> actualizaria el array ->ngClass pintaramos completed-->
 </ul>

@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="formulario col-12 col-sm-4">
+            <app-formulario (empleadoNuevo)="onEmpleadoNuevo($event)"></app-formulario>
+        </div>
+        <div class="listaEmpleados col-12 col-sm-8">
+            <app-lista-empleados [empleados]="arrEmpleados"></app-lista-empleados>
+        </div>
+    </div>
+</div>
+<h1>DIRECCION</h1>
+<app-lista-empleados
+    [empleados]="[{nombre: 'Jefe', apellidos: 'Supremo', dni: '45678D', email: 'jefe@email.com', departamento: 'direccion', activo: true, imagen: ''}, {nombre: 'Jefecillo', apellidos: 'Supremo', dni: '45678D', email: 'jefe@email.com', departamento: 'direccion', activo: false, imagen: ''}, {nombre: 'subjefe', apellidos: 'Supremo', dni: '45678D', email: 'jefe@email.com', departamento: 'direccion', activo: true, imagen: ''}, {nombre: 'Jefe', apellidos: 'Supremo', dni: '45678D', email: 'jefe@email.com', departamento: 'direccion', activo: true, imagen: ''}]">
+</app-lista-empleados>

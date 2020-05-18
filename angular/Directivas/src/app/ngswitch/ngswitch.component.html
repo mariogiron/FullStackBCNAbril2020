@@ -1,0 +1,14 @@
+<div [ngSwitch]="numProductos">
+    <p *ngSwitchCase="1">Tienes un producto</p>
+    <p *ngSwitchCase="2">Tienes dos productos</p>
+    <p *ngSwitchCase="3">Tienes tres productos</p>
+    <p *ngSwitchDefault>Tienes muchos productos</p>
+</div>
+
+
+<div [ngSwitch]="departamento">
+    <p *ngSwitchCase="'contabilidad'">Perteneces al departamento de contabilidad</p>
+    <p *ngSwitchCase="'direccion'">Perteneces al departamento de dirección</p>
+    <p *ngSwitchCase="'desarrollo'">Perteneces al departamento de desarrollo</p>
+    <p *ngSwitchDefault>No perteneces a ningún departamento</p>
+</div>

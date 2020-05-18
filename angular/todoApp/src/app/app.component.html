@@ -7,7 +7,8 @@
             <h4 class="card-title">Aplicación Todo list</h4>
             <app-taskform (tareaEnviada)="tareaEnviada($event)"></app-taskform>
             <div class="list-wrapper">
-              <app-tasklist (tareaBorrada)="tareaBorrada($event)" [tareas]="arrTareas"></app-tasklist>
+              <app-tasklist (tareaCompletada)="tareaCompleta($event)" (tareaBorrada)="tareaBorrada($event)"
+                [tareas]="arrTareas"></app-tasklist>
             </div>
           </div>
         </div>

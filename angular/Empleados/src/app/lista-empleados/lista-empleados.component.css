@@ -1,0 +1,13 @@
+.activo {
+    height: 30px;
+    width: 100%;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.inactivo {
+    height: 30px;
+    width: 100%;
+    background-color: tomato;
+    text-align: center;
+}

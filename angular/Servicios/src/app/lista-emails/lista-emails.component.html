@@ -1,0 +1,7 @@
+<h2>Lista de emails</h2>
+<section class="row">
+    <ul class="col-12 list-group">
+        <li *ngFor="let user of arrUsers" class="list-group-item"><strong>{{user.nombre}}: </strong> <a
+                [href]="'mailo:'+user.email">{{user.email}}</a></li>
+    </ul>
+</section>

@@ -9,13 +9,15 @@ export class TasklistComponent implements OnInit {
 
   @Input() tareas: any[];
   @Output() tareaBorrada: EventEmitter<number>;
+  @Output() tareaCompletada: EventEmitter<number>;
   arrTareas: any[];
-  completed: boolean;
+  completed: number;
 
   constructor() {
     this.arrTareas = [];
     this.tareaBorrada = new EventEmitter();
-    this.completed = false;
+    this.tareaCompletada = new EventEmitter();
+    this.completed = 0;
   }
 
   ngOnInit(): void {
@@ -29,7 +31,8 @@ export class TasklistComponent implements OnInit {
   }
 
   completarTarea($event) {
-    this.completed = $event.target.checked;
+    this.completed = parseInt($event.target.dataset.id);
+    this.tareaCompletada.emit(this.completed);
   }
 
 }

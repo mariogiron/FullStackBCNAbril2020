@@ -14,22 +14,26 @@ export class AppComponent {
       {
         id: 1,
         title: 'Estudiar Javascript',
-        priority: 'urgente'
+        priority: 'urgente',
+        completed: false
       },
       {
         id: 2,
         title: 'Sacar al perro',
-        priority: 'diario'
+        priority: 'diario',
+        completed: false
       },
       {
         id: 3,
         title: 'Leer un libro',
-        priority: 'mensual'
+        priority: 'mensual',
+        completed: false
       },
       {
         id: 4,
         title: 'Ir a la compra',
-        priority: 'urgente'
+        priority: 'urgente',
+        completed: false
       },
     ];
   }
@@ -50,6 +54,15 @@ export class AppComponent {
     // despues borrare ese elemento con splice pasandole la posicion y 1 como cantidad de valor
 
     this.arrTareas.splice(posicionBorrar, 1);
+  }
+
+  tareaCompleta($event) {
+    // console.log('idtareacompletada', $event);
+    this.arrTareas.forEach(tarea => {
+      if (tarea.id === $event) {
+        tarea.completed = !tarea.completed;
+      }
+    });
   }
 
 }

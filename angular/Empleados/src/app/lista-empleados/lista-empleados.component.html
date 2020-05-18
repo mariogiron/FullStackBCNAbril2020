@@ -1,0 +1,23 @@
+<section class="listaEmpleados row">
+    <article class="empleado col-6 col-sm-4" *ngFor="let empleado of empleados">
+        <div class="card">
+            <img [src]="empleado.imagen" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{empleado.nombre}} {{empleado.apellidos}}</h5>
+                <div class="card-text">
+                    <ul>
+                        <li>DNI: {{empleado.dni}}</li>
+                        <li>email: <a [href]="'mailto:' + empleado.email">{{empleado.email}}</a></li>
+                        <li>Departamento: {{empleado.departamento}}</li>
+                    </ul>
+                    <div [ngClass]="{'activo': empleado.activo, 'inactivo':!empleado.activo}"
+                        [innerHTML]="(empleado.activo === true)? 'activo': 'inactivo'"></div>
+                </div>
+                <button (click)="cambiarEstado(empleado)" class="btn btn-primary"
+                    [innerHTML]="(empleado.activo === true)? 'Desactivar': 'Activar'"></button>
+            </div>
+        </div>
+    </article>
+
+
+</section>

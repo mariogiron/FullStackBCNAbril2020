@@ -1,0 +1,33 @@
+<div class="form">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" placeholder="introduce tu nombre" [(ngModel)]="usuario.nombre">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="introduce tu email" [(ngModel)]="usuario.email">
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="number" min="0" max="100" class="form-control" placeholder="introduce tu edad"
+            [(ngModel)]="usuario.edad">
+    </div>
+    <div class="form-group">
+        <label>Departamento</label>
+        <select class="form-control" [(ngModel)]="usuario.departamento">
+            <option value="">Selecciona un departamento</option>
+            <option value="direccion">Dirección</option>
+            <option value="staff">Staff</option>
+            <option value="comercial">Comercial</option>
+            <option value="profesorado">Profesorado</option>
+        </select>
+    </div>
+    <div>
+        <label>¿Activo?</label>
+        <input type="checkbox" [(ngModel)]="usuario.activo">
+    </div>
+    <div>
+        <button (click)="onClickGuardar()" class="btn btn-danger">Guardar</button>
+    </div>
+</div>
+<hr>

@@ -1,0 +1,19 @@
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 5px;
+}
+
+nav ul li .activo {
+    background-color: tomato;
+}

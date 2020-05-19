@@ -1,0 +1,16 @@
+<header>
+  <h1>LOGO</h1>
+  <nav>
+    <!-- 
+      /home/otro
+    -->
+    <ul>
+      <li><a [routerLink]="['/home']" routerLinkActive="activo">HOME</a></li>
+      <li><a [routerLink]="['/servicios']" routerLinkActive="activo">SERVICIOS</a></li>
+      <li><a [routerLink]="['/contacto']" routerLinkActive="activo">CONTACTO</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet>
+  <!-- se van a cargar los componentes en funcion de mis rutas -->
+</router-outlet>

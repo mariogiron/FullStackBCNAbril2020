@@ -1,4 +1,16 @@
-<h2>Lista de emails</h2>
+<div class="mb-3">
+    <span class="mx-1"><button (click)="onClickTodos()" class="btn btn-info">Todos</button></span>
+    <span class="mx-1"><button (click)="onClickActivos()" class="btn btn-info">Activos</button></span>
+    <div class="my-2">
+        <select class="form-control" (change)="onChangeDepartamento($event)">
+            <option value="">Selecciona un departamento</option>
+            <option value="direccion">Dirección</option>
+            <option value="staff">Staff</option>
+            <option value="comercial">Comercial</option>
+            <option value="profesorado">Profesorado</option>
+        </select>
+    </div>
+</div>
 <section class="row">
     <ul class="col-12 list-group">
         <li *ngFor="let user of arrUsers" class="list-group-item"><strong>{{user.nombre}}: </strong> <a

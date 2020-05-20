@@ -1,0 +1,19 @@
+.producto {
+    padding: 40px;
+}
+
+.children {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.submenu li {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}

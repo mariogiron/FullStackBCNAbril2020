@@ -12,12 +12,11 @@ export class ProductoComponent implements OnInit {
   productoCargado: any;
   constructor(private activatedRoute: ActivatedRoute) {
     this.arrProductos = new Array(
-      { id: 1, nombre: 'Leche desnatada' },
-      { id: 2, nombre: 'Pan' },
-      { id: 3, nombre: 'Pizza' },
-      { id: 4, nombre: 'Carne' },
+      { id: 1, nombre: 'Leche desnatada', descripcion: 'Leche desnatada pascual' },
+      { id: 2, nombre: 'Pan', descripcion: 'pan de pueblo del rico' },
+      { id: 3, nombre: 'Pizza', descripcion: 'piza italiana de la toscana' },
+      { id: 4, nombre: 'Carne', descripcion: 'Carne de ternera Angus' },
     );
-    this.productoCargado = this.arrProductos[0];
   }
 
   ngOnInit(): void {

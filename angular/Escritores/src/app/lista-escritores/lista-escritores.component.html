@@ -1,0 +1,11 @@
+<section class="row">
+    <article class="col-12 col-sm-3" *ngFor="let escritor of arrEscritores">
+        <div class="card">
+            <img [src]="escritor.imagen" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{escritor.nombre}} {{escritor.apellidos}}</h5>
+                <a [routerLink]="['/escritor', escritor.id]" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+    </article>
+</section>

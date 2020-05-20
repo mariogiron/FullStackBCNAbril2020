@@ -20,7 +20,9 @@ export class ContactoComponent implements OnInit {
 
   login() {
     if (this.usuario === 'Juanan' && this.pass === '123456') {
-      // alert('Usuario logado');
+      // SI el usuario existe, tengo guardar un dato isLogado = true en algun sitio donde pueda despues recogerlo.
+      const isLogado = 'activo';
+      localStorage.setItem('logado', isLogado);
       // navegacion a otro componente cuando acabe de recoger la info del formulario.
       this.router.navigate(['/info'])
     } else {

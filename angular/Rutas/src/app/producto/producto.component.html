@@ -1,3 +1,13 @@
-<div>
+<div class="producto">
     <h3>{{productoCargado.nombre}}</h3>
+    <p>{{productoCargado.descripcion}}</p>
+    <hr>
+    <ul class="submenu">
+        <li [routerLink]="['/producto', productoCargado.id, 'especificaciones']">Especificaciones</li>
+        <li [routerLink]="['/producto', productoCargado.id, 'comentarios']">Comentarios</li>
+        <li [routerLink]="['/producto', productoCargado.id, 'relacionados']">Relacionados</li>
+    </ul>
+    <div class="children">
+        <router-outlet></router-outlet>
+    </div>
 </div>

@@ -9,6 +9,9 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { InfoComponent } from './info/info.component';
 import { ProductoComponent } from './producto/producto.component';
+import { RelacionadosComponent } from './producto/relacionados/relacionados.component';
+import { ComentariosComponent } from './producto/comentarios/comentarios.component';
+import { EspecificacionesComponent } from './producto/especificaciones/especificaciones.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ProductoComponent } from './producto/producto.component';
     ServiciosComponent,
     ContactoComponent,
     InfoComponent,
-    ProductoComponent
+    ProductoComponent,
+    RelacionadosComponent,
+    ComentariosComponent,
+    EspecificacionesComponent
   ],
   imports: [
     BrowserModule,

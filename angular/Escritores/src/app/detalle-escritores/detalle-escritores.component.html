@@ -1,14 +1,21 @@
 <div class="escritor row">
     <div class="col-12 col-sm-4">
         <div class="img">
-            <img [src]="detalleEscritor.imagen">
+            <!-- la ? espera a que el contenido me llegue antes de pintarlo para que no de error en la carga del html -->
+            <img [src]="detalleEscritor?.imagen">
         </div>
     </div>
     <div class="col-12 col-sm-8">
         <ul>
-            <li>Nombre: {{detalleEscritor.nombre}}</li>
-            <li>Apellidos: {{detalleEscritor.apellidos}}</li>
-            <li>Pais: {{detalleEscritor.pais}}</li>
+            <li>Nombre: {{detalleEscritor?.nombre}}</li>
+            <li>Apellidos: {{detalleEscritor?.apellidos}}</li>
+            <li>Pais: {{detalleEscritor?.pais}}</li>
         </ul>
+        <div>
+            <h3>Obra del autor</h3>
+            <hr>
+            <router-outlet></router-outlet>
+        </div>
     </div>
+
 </div>

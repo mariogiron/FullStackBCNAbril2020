@@ -1,0 +1,51 @@
+
+<h3>Lista Usuarios</h3>
+
+
+<input type="text" [(ngModel)]="percentage">
+
+<li>percentage: {{percentage | percent}}</li>
+<li>percentage: {{percentage | percent:'2.2'}}</li>
+
+
+
+<ul *ngFor="let person of arrPeople">
+    <li>{{person.name | uppercase}}</li>
+    <li>{{person.name | lowercase}}</li>
+    <li>{{person.birthdate | date:"dd/MM/yy"}}</li>
+    <li>Formato: {{person.birthdate | date:formatDateInComponent}}</li>
+    
+    <li>{{person.birthdate | formatDate:'1960-05-15'}}</li>
+
+    <li>{{person.salary | currency:'EUR':'EN EUROS: ':'4.2-3'}}</li>
+</ul>
+
+
+<h1>PERSONAS CON LA LETRA A</h1>
+
+<ul *ngFor="let person of (arrPeople | personasLetraA) ">
+    <li>{{person.name | uppercase}}</li>
+    <li>{{person.name | lowercase}}</li>
+    <li>{{person.birthdate | date:"dd/MM/yy"}}</li>
+    <li>{{person.salary | currency:'EUR':'EN EUROS: ':'4.2-3'}}</li>
+</ul>
+
+
+
+<h1>PERSONAS CON LA LETRA B</h1>
+
+<ul *ngFor="let person of (arrPeople | personasLetra:'B') ">
+    <li>{{person.name | uppercase}}</li>
+    <li>{{person.name | lowercase}}</li>
+    <li>{{person.birthdate | date:"dd/MM/yy"}}</li>
+    <li>{{person.salary | currency:'EUR':'EN EUROS: ':'4.2-3'}}</li>
+</ul>
+
+<h1>PERSONAS CON LA LETRA H</h1>
+
+<ul *ngFor="let person of (arrPeople | personasLetra:'H') ">
+    <li>{{person.name | uppercase}}</li>
+    <li>{{person.name | lowercase}}</li>
+    <li>{{person.birthdate | date:"dd/MM/yy"}}</li>
+    <li>{{person.salary | currency:'EUR':'EN EUROS: ':'4.2-3'}}</li>
+</ul>

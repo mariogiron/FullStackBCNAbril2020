@@ -1,0 +1,9 @@
+<p>calculadora works!</p>
+
+Numero 1: <input type="text" [(ngModel)]="number1"><BR>
+Numero 2: <input type="text" [(ngModel)]="number2"><BR>
+
+    Suma: {{number1 | sumaNumeros:number2}}
+    Restar: {{number1 | sumaNumeros:number2:'restar'}}
+    Dividir: {{number1 | sumaNumeros:number2:'dividir'}}
+    Multiplicar: {{number1 | sumaNumeros:number2:'multiplicar'}}

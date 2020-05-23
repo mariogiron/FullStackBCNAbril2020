@@ -1,0 +1,32 @@
+<h1>Model</h1>
+<form novalidate [formGroup]="formulario" (ngSubmit)="recogerDatos()">
+    <!-- nombre, direccion, email , edad-->
+    <div class="form-group">
+        <label>NOMBRE</label>
+        <input type="text" name="nombre" class="form-control" placeholder="Introduce tu nombre"
+            formControlName="nombre">
+        <p class="error" *ngIf="formulario.controls.nombre.errors?.required && formulario.controls.nombre.touched">El
+            campo no puede estar vacio</p>
+        <p class="error" *ngIf="formulario.controls.nombre.errors?.minlength && formulario.controls.nombre.touched">El
+            campo tiene que tener al menos 3
+            caracteres</p>
+    </div>
+    <div class="form-group">
+        <label>DIRECCION</label>
+        <input type="text" name="direccion" class="form-control" formControlName="direccion">
+        <p class="error"
+            *ngIf="formulario.controls.direccion.errors?.required && formulario.controls.direccion.touched">Campo
+            requirido</p>
+    </div>
+    <div class="form-group">
+        <label>EMAIL</label>
+        <input type="email" name="email" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+        <label>EDAD</label>
+        <input type="text" name="edad" class="form-control" formControlName="edad">
+        <p class="error" *ngIf="formulario.controls.edad.touched && formulario.controls.edad.errors?.edadValidador">
+            {{formulario.controls.edad.errors.edadValidador}}</p>
+    </div>
+    <input [disabled]="!formulario.valid" type="submit" class="btn btn-info" value="Enviar">
+</form>

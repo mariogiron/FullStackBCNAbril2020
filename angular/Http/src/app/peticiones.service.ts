@@ -21,6 +21,12 @@ export class PeticionesService {
     return this.httpClient.get(pUrl).toPromise();
   }
 
+  // a apartir de aqui uso jsonplaceholder
+
+  getPost(): Promise<any[]> {
+    return this.httpClient.get<any[]>(this.baseUrlPost).toPromise();
+  }
+
   createPost(pTitulo, pBody) {
     const body = {
       title: pTitulo,
@@ -31,5 +37,19 @@ export class PeticionesService {
       headers: new HttpHeaders({ 'Content-type': 'application/json; charset=UTF-8' })
     };
     return this.httpClient.post(this.baseUrlPost, body, httpOptions).toPromise();
+  }
+
+  updatePost(pPost) {
+    const body = pPost;
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-type': 'application/json; charset=UTF-8' })
+    };
+
+    return this.httpClient.put(this.baseUrlPost + pPost.id, body, httpOptions).toPromise();
+
+  }
+
+  deletePost(pId) {
+    return this.httpClient.delete(this.baseUrlPost + pId).toPromise();
   }
 }

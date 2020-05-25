@@ -4,7 +4,7 @@
             <img [src]="escritor.imagen" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{escritor.nombre}} {{escritor.apellidos}}</h5>
-                <a [routerLink]="['/escritor', escritor.id]" class="btn btn-primary">Ver detalle</a>
+                <a [routerLink]="['/escritor', escritor.id, 'libros']" class="btn btn-primary">Ver detalle</a>
             </div>
         </div>
     </article>

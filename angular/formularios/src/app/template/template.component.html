@@ -1,0 +1,34 @@
+<h1>Template</h1>
+<form #formulario="ngForm" (ngSubmit)="recogerDatos(formulario.value); formulario.reset();">
+    <!-- nombre, direccion, email , edad-->
+    <div class="from-group">
+        <label>NOMBRE</label>
+        <input type="text" name="nombre" class="form-control" ngModel placeholder="Introduce tu nombre">
+    </div>
+    <div class="from-group">
+        <label>DIRECCION</label>
+        <input type="text" name="direccion" class="form-control" ngModel>
+    </div>
+    <div class="from-group">
+        <label>EMAIL</label>
+        <input type="text" name="email" class="form-control" ngModel>
+    </div>
+    <div class="from-group">
+        <label>EDAD</label>
+        <input type="text" name="edad" class="form-control" ngModel>
+    </div>
+    <input type="submit" class="btn btn-info" value="Enviar">
+</form>
+<hr>
+<hr>
+<div class="users">
+    <article *ngFor="let user of arrUsuarios">
+        <h2>{{user.nombre}}</h2>
+        <ul>
+            <li>EDAD: {{user.edad}} </li>
+            <li>EMAIL: {{user.email}}</li>
+            <li>DIRECCION: {{user.direccion}}</li>
+        </ul>
+        <hr>
+    </article>
+</div>

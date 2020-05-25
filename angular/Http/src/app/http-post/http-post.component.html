@@ -1,0 +1,11 @@
+<div class="form">
+    <div>
+        <label>Titulo</label><br>
+        <input type="text" [(ngModel)]="title">
+    </div>
+    <div>
+        <label>Contenido</label><br>
+        <textarea cols="30" rows="10" [(ngModel)]="body"></textarea>
+    </div>
+    <button (click)="recogerInfo()">Enviar</button>
+</div>

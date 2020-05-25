@@ -1,0 +1,19 @@
+<div class="form">
+    <div>
+        <label>titulo</label><br>
+        <input type="text" [(ngModel)]="postActualizar.title">
+    </div>
+    <div>
+        <label>Contenido</label><br>
+        <textarea cols="30" rows="10" [(ngModel)]="postActualizar.body"></textarea>
+    </div>
+    <button (click)="enviar()">Enviar</button>
+</div>
+<div class="posts">
+    <article *ngFor="let post of arrPost" [attr.data-id]="post.id" [attr.data-user]="post.userId">
+        <h2>{{post.title}}</h2>
+        <p>{{post.body}}</p>
+        <button (click)="actualizarPost(post.id)">Actualizar</button>
+        <hr>
+    </article>
+</div>

@@ -1,0 +1,8 @@
+<div class="posts">
+    <article *ngFor="let post of arrPost" [attr.data-id]="post.id" [attr.data-user]="post.userId">
+        <h2>{{post.title}}</h2>
+        <p>{{post.body}}</p>
+        <button (click)="borrar(post.id)">Borrar</button>
+        <hr>
+    </article>
+</div>

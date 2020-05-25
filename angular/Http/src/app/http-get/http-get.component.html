@@ -1,0 +1,14 @@
+<div class="flex">
+    <ul>
+        <li [attr.data-url]="pok?.url" *ngFor="let pok of arrPokemons" (click)="cargarPokemon($event)">
+            {{pok?.name}}</li>
+    </ul>
+    <div class="pokemon">
+        <article>
+            <h1>{{pokemon?.name}}</h1>
+            <div>
+                <img [src]="pokemon?.sprites.front_default" alt="">
+            </div>
+        </article>
+    </div>
+</div>

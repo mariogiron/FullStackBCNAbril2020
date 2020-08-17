@@ -47,3 +47,11 @@ export class ModelComponent implements OnInit {
   }
 
 }
+
+/* 
+
+  valid - invalid
+  pristine - dirtuy (sin tocar escrito / ya esta tocado)
+  untouched - touched ( sin foco / foco)
+
+*/
